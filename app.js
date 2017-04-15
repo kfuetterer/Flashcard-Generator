@@ -22,7 +22,6 @@ function ClozeCard (text, cloze) {
         theArrayCloze.push(this);
     };
     this.addToArray();
-    //error
 }
 
 ClozeCard.prototype.partial = function() {
@@ -133,12 +132,165 @@ if (process.argv[2] === "Cloze-Card"){
         inquirer.prompt([
             {
                 type: "input",
-                message: theArrayCloze[0].partial,
+                message: theArrayCloze[0].partial(),
                 name: "firstQuestion"
             }
-        ]).then(function(data) {
-            if (data === theArrayCloze[0].cloze) {
+        ]).then(function(input) {
+            if (input.firstQuestion === theArrayCloze[0].cloze) {
                 console.log("Correct!");
+                        inquirer.prompt([
+                            {
+                                type: "input",
+                                message: theArrayCloze[1].partial(),
+                                name: "SecondQuestion"
+                            }
+                        ]).then(function(input) {
+                            if (input.SecondQuestion === theArrayCloze[1].cloze) {
+                                console.log("Correct!");
+                                inquirer.prompt([
+                                    {
+                                        type: "input",
+                                        message: theArrayCloze[2].partial(),
+                                        name: "ThirdQuestion"
+                                    }
+                                ]).then(function(input) {
+                                    if (input.ThirdQuestion === theArrayCloze[2].cloze) {
+                                        console.log("Correct!");
+                                        inquirer.prompt([
+                                            {
+                                                type: "input",
+                                                message: theArrayCloze[3].partial(),
+                                                name: "FourthQuestion"
+                                            }
+                                        ]).then(function(input) {
+                                            if (input.FourthQuestion === theArrayCloze[3].cloze) {
+                                                console.log("Correct!");
+                                                inquirer.prompt([
+                                                    {
+                                                        type: "input",
+                                                        message: theArrayCloze[4].partial(),
+                                                        name: "FifthQuestion"
+                                                    }
+                                                ]).then(function(input) {
+                                                    if (input.FifthQuestion === theArrayCloze[4].cloze) {
+                                                        console.log("Correct!");
+                                                        inquirer.prompt([
+                                                            {
+                                                                type: "input",
+                                                                message: theArrayCloze[5].partial(),
+                                                                name: "SixthQuestion"
+                                                            }
+                                                        ]).then(function(input) {
+                                                            if (input.SixthQuestion === theArrayCloze[5].cloze) {
+                                                                console.log("Correct!");
+                                                                inquirer.prompt([
+                                                                    {
+                                                                        type: "input",
+                                                                        message: theArrayCloze[6].partial(),
+                                                                        name: "SeventhQuestion"
+                                                                    }
+                                                                ]).then(function(input) {
+                                                                    if (input.SeventhQuestion === theArrayCloze[6].cloze) {
+                                                                        console.log("Correct!");
+                                                                        inquirer.prompt([
+                                                                            {
+                                                                                type: "input",
+                                                                                message: theArrayCloze[7].partial(),
+                                                                                name: "EighthQuestion"
+                                                                            }
+                                                                        ]).then(function(input) {
+                                                                            if (input.EighthQuestion === theArrayCloze[7].cloze) {
+                                                                                console.log("Correct!");
+                                                                                inquirer.prompt([
+                                                                                    {
+                                                                                        type: "input",
+                                                                                        message: theArrayCloze[8].partial(),
+                                                                                        name: "NinthQuestion"
+                                                                                    }
+                                                                                ]).then(function(input) {
+                                                                                    if (input.NinthQuestion === theArrayCloze[8].cloze) {
+                                                                                        console.log("Correct!");
+                                                                                        inquirer.prompt([
+                                                                                            {
+                                                                                                type: "input",
+                                                                                                message: theArrayCloze[9].partial(),
+                                                                                                name: "TenthQuestion"
+                                                                                            }
+                                                                                        ]).then(function(input) {
+                                                                                            if (input.TenthQuestion === theArrayCloze[9].cloze) {
+                                                                                                console.log("Correct!");
+                                                                                            } else {
+                                                                                                console.log("Incorrect. The answer is '" + theArrayCloze[9].cloze + "'.");
+                                                                                            }
+                                                                                            
+                                                                                        }).catch(function (err) {
+                                                                                            console.log("Promise Rejected");
+                                                                                            console.log(err);
+                                                                                        });
+                                                                                    } else {
+                                                                                        console.log("Incorrect. The answer is '" + theArrayCloze[8].cloze + "'.");
+                                                                                    }
+                                                                                    
+                                                                                }).catch(function (err) {
+                                                                                    console.log("Promise Rejected");
+                                                                                    console.log(err);
+                                                                                });
+                                                                            } else {
+                                                                                console.log("Incorrect. The answer is '" + theArrayCloze[7].cloze + "'.");
+                                                                            }
+                                                                            
+                                                                        }).catch(function (err) {
+                                                                            console.log("Promise Rejected");
+                                                                            console.log(err);
+                                                                        });
+                                                                    } else {
+                                                                        console.log("Incorrect. The answer is '" + theArrayCloze[6].cloze + "'.");
+                                                                    }
+                                                                    
+                                                                }).catch(function (err) {
+                                                                    console.log("Promise Rejected");
+                                                                    console.log(err);
+                                                                });
+                                                            } else {
+                                                                console.log("Incorrect. The answer is '" + theArrayCloze[5].cloze + "'.");
+                                                            }
+                                                            
+                                                        }).catch(function (err) {
+                                                            console.log("Promise Rejected");
+                                                            console.log(err);
+                                                        });
+                                                    } else {
+                                                        console.log("Incorrect. The answer is '" + theArrayCloze[4].cloze + "'.");
+                                                    }
+                                                    
+                                                }).catch(function (err) {
+                                                    console.log("Promise Rejected");
+                                                    console.log(err);
+                                                });
+                                            } else {
+                                                console.log("Incorrect. The answer is '" + theArrayCloze[3].cloze + "'.");
+                                            }
+                                            
+                                        }).catch(function (err) {
+                                            console.log("Promise Rejected");
+                                            console.log(err);
+                                        });
+                                    } else {
+                                        console.log("Incorrect. The answer is '" + theArrayCloze[2].cloze + "'.");
+                                    }
+                                    
+                                }).catch(function (err) {
+                                    console.log("Promise Rejected");
+                                    console.log(err);
+                                });
+                            } else {
+                                console.log("Incorrect. The answer is '" + theArrayCloze[1].cloze + "'.");
+                            }
+                            
+                        }).catch(function (err) {
+                            console.log("Promise Rejected");
+                            console.log(err);
+                        });
             } else {
                 console.log("Incorrect. The answer is '" + theArrayCloze[0].cloze + "'.");
             }
